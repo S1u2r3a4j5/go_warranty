@@ -83,6 +83,7 @@
     background-color: #F4AA06;
     padding: 8px 20px;
     cursor: pointer;
+    color: white;
 }
 
 .contacts span i {
@@ -370,7 +371,7 @@
 
     .login-part,
     .enquiry-part {
-        width: 103%;
+        width: 105%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -379,8 +380,8 @@
     .login-part span,
     .enquiry-part span {
         display: block;
-        margin: 4px;
-        padding: 9px 23px;
+        margin: 3px;
+        padding: 8px 20px;
         background-color: black;
         color: white;
         border-radius: 4px;
@@ -399,7 +400,7 @@
 
     /* Arrange items in the login-part row */
     .login-part {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     /* Place "APK DOWNLOAD" on its own row */
@@ -489,7 +490,7 @@
         background-color: aqua;
     }
 
-   
+
     .trusted_client {
         height: 200px;
         position: relative;
@@ -497,6 +498,7 @@
         padding-right: 17px;
         padding-left: 20px;
     }
+
     .trusted_client h1 {
         text-align: center;
         font-weight: bolder;
@@ -504,10 +506,12 @@
         margin-top: 23px;
         font-size: 25px;
     }
+
     .swiper-slide {
         /* width: 370px; */
     }
-    .swiper-pagination{
+
+    .swiper-pagination {
         width: 50%;
         margin-left: 22%;
         height: 45px;
@@ -569,12 +573,14 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 52px;
     }
 
     .repair {
         width: 100%;
         margin-bottom: 20px;
+        margin-top: 18px;
+        margin-left: 35px;
         /* Space between each repair div */
     }
 
@@ -604,6 +610,11 @@
         /* Reduced button font size */
         padding: 7px 18px;
         /* Reduced padding */
+    }
+    .repair_spare .repair .wd_image span svg {
+        position: absolute;
+        margin-top: -15px;
+        left: 53px;
     }
 }
 
@@ -695,9 +706,317 @@
 
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .registration {
+        flex-direction: row;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+
+    .left_content img {
+        width: 100%;
+    }
+
+    .concern h1 {
+        font-size: 41px;
+    }
+
+    .right_content {
+        text-align: left;
+    }
+
+    .doorstep {
+        width: 100%;
+        height: auto;
+        margin-top: 6px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .doorstep_u {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .doorstep_left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+    .doorstep_right {
+        flex: 1;
+        height: auto;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1180px) {
+
+    .enquiry-part span {
+        background-color: #D18A0C;
+    }
+
+    .left_content img {
+        height: 495px;
+        width: 432px !important;
+        margin-left: -14px;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        object-fit: contain;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        margin: 25px;
+        margin-left: 30px;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 148px;
+        left: 0;
+        z-index: 1000;
+        background-color: white;
+        line-height: 3px;
+        cursor: pointer;
+        /* Background color for visibility */
+    }
+
+    /* If you have list items or links inside the navbar */
+    .navbar ul {
+        display: flex;
+        /* Flexbox applied to the list */
+        flex-direction: column;
+        /* Arrange list items in column */
+        list-style: none;
+        /* Optional: Remove bullet points */
+        padding: 0;
+        /* Optional: Remove padding */
+        margin: 0;
+        /* Optional: Remove margin */
+        width: 100%;
+        /* Full width */
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        /* Optional: Margin between items */
+        text-align: center;
+        /* Center align the text */
+    }
+
+    .navbar ul li a {
+        display: block;
+        /* Make links block level */
+        padding: 10px 15px;
+        /* Padding for links */
+        color: black;
+        /* Text color */
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    /* Adjust other elements inside the navbar if needed */
+    .navbar>* {
+        margin: 5px 0;
+        /* Margin between navbar children */
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 535px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .left_content {
+        width: 100%;
+        height: auto;
+    }
+
+    .left_content img {
+        height: 550px;
+        width: 333px !important;
+        margin-left: 3px;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        object-fit: contain;
+        margin-top: 0px;
+    }
+
+    .right_content {
+        position: relative;
+        z-index: 1;
+        width: 134%;
+        margin-top: 10%;
+        /* background-color: aqua; */
+        /* margin-right: 39px; */
+        margin: 122px 25px 11px 3px;
+    }
+
+    .right_content .upp {
+        width: 100%;
+        font-size: 18px;
+        color: #F4AA06;
+        font-weight: bold;
+    }
+
+    .concern {
+        width: 100%;
+    }
+
+    .concern h1 {
+        font-size: 40px;
+    }
+
+    .repair_spare {
+        display: flex;
+        width: 100%;
+        margin-top: 105px;
+    }
+
+    .repair {
+        width: 60%;
+        margin-right: 21px;
+    }
+}
+
+/* @media only screen and (min-width: 820px) and (max-width: 1180px){
+    .ac_repair {
+        margin: 0px 10px;
+    }
+
+    .ac_repair_u {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ac_repair .ac_repair_u .img_h5 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .ac_repair .ac_repair_u h5 {
+        font-size: 16px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .ac_repair .ac_repair_u span {
+        padding: 8px 15px;
+    }
+
+    .ac_repair .ac_repair_u .book_now {
+        margin: 20px 0 10px 0;
+    }
 
 
 
+} */
 
 
+@media only screen and (min-width: 820px) and (max-width: 1180px) {
+    .ac_repair {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        /* Flexbox applied */
+        justify-content: center;
+        /* Center align items horizontally */
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        margin: 0px 0px;
+    }
 
+    .ac_repair_u {
+        display: flex;
+        /* Flexbox applied */
+        justify-content: center;
+        /* Center align items horizontally */
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        width: 100%;
+        /* Full width */
+    }
+
+    .img_h5 {
+        width: calc(50% - 20px);
+        /* 50% width for each item with margin */
+        margin: 10px;
+        /* Space around each item */
+        text-align: center;
+        /* Center align text */
+        box-sizing: border-box;
+        /* Include padding and border in width */
+    }
+
+    .img_h5 img {
+        width: 100%;
+        /* Full width image */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .img_h5 h5 {
+        font-size: 18px;
+        /* Adjust heading size */
+        margin-top: 10px;
+        /* Space above heading */
+    }
+
+    .book_now {
+        background-color: #f0f0f0;
+        /* Light background for book now */
+        padding: 10px 0;
+        /* Padding inside */
+        margin-top: 10px;
+        /* Space above book now */
+        cursor: pointer;
+        /* Pointer cursor */
+    }
+
+    .book_now span {
+        display: inline-flex;
+        /* Flexbox for icon and text */
+        align-items: center;
+        /* Center align icon and text */
+        font-weight: bold;
+        /* Bold text */
+        color: #333;
+        /* Text color */
+    }
+
+    .book_now i {
+        margin-right: 8px;
+        /* Space between icon and text */
+    }
+}
