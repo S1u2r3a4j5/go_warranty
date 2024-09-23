@@ -140,7 +140,7 @@
 <body>
     <!-- Registration Structure Begins Here -->
     <div>
-        <div class="registration">
+        {{-- <div class="registration">
             <div class="login-part">
                 <span>Login</span>
                 <span style="margin-left: 6px;">Registration</span>
@@ -149,13 +149,25 @@
                 <span>Enquiry Now</span>
                 <span style="margin-left: 6px;">APK DOWNLOAD</span>
             </div>
+        </div> --}}
+        <div class="registration">
+            <div class="login-part">
+                <span>Login</span>
+                <span>Registration</span>
+                <span>Enquiry Now</span>
+            </div>
+            <div class="enquiry-part">
+                <span>APK DOWNLOAD</span>
+            </div>
         </div>
-        <!-- Registration Structure Ends Here -->
 
         <!------ About Section here --->
         <section>
 
             <div class="menu-section">
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i> <!-- Use Font Awesome or any icon library -->
+                </div>
                 <div class="spareware">
                     <div>
                         <img src="{{ asset('images/transparent-logo-2.png') }}" alt="transparent logo-2">
@@ -311,20 +323,16 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img
-                            src="https://espareware.com/wp-content/uploads/2024/02/reliance-1-1.png" alt="reliance-1">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('images/icon/reliance-1.png') }}" alt="reliance-1">
                     </div>
-                    <div class="swiper-slide"><img
-                            src="https://espareware.com/wp-content/uploads/2024/02/paytm-1-1.jpg" alt="paytm-1">
+                    <div class="swiper-slide"><img src="{{ asset('images/icon/paytm-1.jpg') }}" alt="paytm-1">
                     </div>
-                    <div class="swiper-slide"><img
-                            src="https://espareware.com/wp-content/uploads/2024/02/onsite-1-1.png" alt="onsite-1">
+                    <div class="swiper-slide"><img src="{{ asset('images/icon/onsite-1.png') }}" alt="onsite-1">
                     </div>
-                    <div class="swiper-slide"><img
-                            src="https://espareware.com/wp-content/uploads/2024/02/croma-1-1.png" alt="croma-1">
+                    <div class="swiper-slide"><img src="{{ asset('images/icon/croma-1.png') }}" alt="croma-1">
                     </div>
-                    <div class="swiper-slide"><img
-                            src="https://espareware.com/wp-content/uploads/2024/02/voltas-1-1.png" alt="voltas-1">
+                    <div class="swiper-slide"><img src="{{ asset('images/icon/voltas-1.png') }}" alt="voltas-1">
                     </div>
                 </div>
                 <div class="swiper-button-prev"></div>
@@ -339,44 +347,6 @@
         </div>
     </div>
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> --}}
-    {{-- <script>
-        let currentIndex = 0;
-        const bullets = document.querySelectorAll('.custom-bullet');
-        const totalBullets = bullets.length;
-
-        function changeActiveBullet() {
-            bullets.forEach((bullet, index) => {
-                bullet.classList.remove('custom-bullet-active');
-                if (index === currentIndex) {
-                    bullet.classList.add('custom-bullet-active');
-                }
-            });
-
-            // Move to the next bullet
-            currentIndex = (currentIndex + 1) % totalBullets;
-        }
-
-        // Call the function every 5 seconds
-        setInterval(changeActiveBullet, 5000);
-    </script> --}}
-    {{-- <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script> --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -395,6 +365,18 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+        });
+    </script>
+ 
+    <script>
+        // JavaScript to toggle menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            var navbar = document.querySelector('.navbar');
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'flex';
+            } else {
+                navbar.style.display = 'none';
+            }
         });
     </script>
 
